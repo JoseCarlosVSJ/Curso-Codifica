@@ -13,7 +13,7 @@ Certifique-se de que o Node.js e o npm (Node Package Manager) estão instalados 
 
 Para executar qualquer um dos scripts de exercício, use o seguinte comando no terminal:
 
-node <caminho-do-arquivo>
+node {nome do arquivo}.js
 
 # 📝 Lista de Exercícios
 1. 🌡️ Converta uma temperatura em graus Celsius para Fahrenheit.
