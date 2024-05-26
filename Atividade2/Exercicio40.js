@@ -6,3 +6,4 @@ resultado oficial e mostre uma mensagem ("Ganhador") se todos os números
 corresponderem ao resultado oficial. (Observação: não é necessário procurar por ternos
 e quadras, apenas por quinas.)
  */
+

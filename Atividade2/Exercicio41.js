@@ -4,8 +4,16 @@ idade. Adicione uma nova propriedade chamada email ao objeto pessoa que já poss
 nome e idade.
 */
 
-const Pessoa = {
-    nome,
-    idade,
-    email
-}
+function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+  
+
+let p1 = new Pessoa("Jacques", 20);
+
+console.log(p1)
+
+p1.email = "Jacques@email.com"
+
+console.log(p1)
