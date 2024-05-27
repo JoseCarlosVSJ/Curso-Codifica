@@ -7,3 +7,34 @@ corresponderem ao resultado oficial. (Observação: não é necessário procurar
 e quadras, apenas por quinas.)
  */
 
+let resultado = gerarVetorAleatorio();
+let apostas = [];
+
+
+function gerarVetorAleatorio() {
+    let vetor = [];
+    for (let i = 0; i < 5; i++) {
+        vetor[i] = Math.round(Math.random() * 10); // Gera números aleatórios entre 0 e 10
+    }
+    return vetor;
+}
+
+
+
+console.log("Resultado:", resultado);
+
+
+for (let i = 0; i < 50; i++) {
+    apostas.push(gerarVetorAleatorio());
+}
+
+
+console.log("Resultados das Apostas:");
+
+apostas.forEach((aposta) => {
+    if (apostas.sort().toString() === resultado.sort().toString()) {
+        console.log(`Aposta ${aposta.indexOf}: Ganhador`);
+    } else {
+        console.log(`Aposta ${aposta.indexOf}: Perdedor`);
+    }
+});
