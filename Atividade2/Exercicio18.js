@@ -3,13 +3,15 @@ Crie um registro com o nome do funcionário, cargo e salário. Leia este registr
 um funcionário e ao final escreva o conteúdo do registro.
  */
 
-function funcionario(nome,cargo,salario) {
-    this.nome = nome;
-    this.cargo = cargo;
-    this.salario = salario;
+class Funcionario {
+    constructor(nome, cargo, salario) {
+        this.nome = nome;
+        this.cargo = cargo;
+        this.salario = salario;
+    }
 }
 
-let f1 = new funcionario("Jose","Desenvolvedor",10000)
+let f1 = new Funcionario("Jose","Desenvolvedor",10000)
 
 
 console.log("Caracteristicas do funcionario:")

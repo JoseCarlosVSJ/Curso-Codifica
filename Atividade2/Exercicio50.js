@@ -27,18 +27,22 @@ cliente.
 único hotel.
 */
 
-function hotel(id, nome, cidade, quartosTotais) {
-    this.id = id;
-    this.nome = nome;
-    this.cidade = cidade;
-    this.quartosTotais = quartosTotais;
-    this.quartosDisponiveis = quartosTotais;
+class Hotel {
+    constructor(id, nome, cidade, quartosTotais) {
+        this.id = id;
+        this.nome = nome;
+        this.cidade = cidade;
+        this.quartosTotais = quartosTotais;
+        this.quartosDisponiveis = quartosTotais;
+    }
 }
 
-function reserva(idReserva, idHotel, nomeCliente) {
-    this.idReserva = idReserva;
-    this.idHotel = idHotel;
-    this.nomeCliente = nomeCliente;
+class Reserva {
+    constructor(idReserva, idHotel, nomeCliente) {
+        this.idReserva = idReserva;
+        this.idHotel = idHotel;
+        this.nomeCliente = nomeCliente;
+    }
 }
 
 const prompt = require('prompt-sync')();
@@ -52,7 +56,7 @@ function adicionarHotel(id, nome, cidade, quartosTotais) {
             return;
         }
     }
-    let novoHotel = new hotel(id, nome, cidade, quartosTotais);
+    let novoHotel = new Hotel(id, nome, cidade, quartosTotais);
     hoteis.push(novoHotel);
     console.log('Hotel adicionado:', novoHotel);
 }
@@ -78,7 +82,7 @@ function fazerReserva(idReserva, idHotel, nomeCliente) {
         if (hoteis[i].id === idHotel) {
             if (hoteis[i].quartosDisponiveis > 0) {
                 hoteis[i].quartosDisponiveis--;
-                let novaReserva = new reserva(idReserva, idHotel, nomeCliente);
+                let novaReserva = new Reserva(idReserva, idHotel, nomeCliente);
                 reservas.push(novaReserva);
                 console.log('Reserva feita:', novaReserva);
             } else {

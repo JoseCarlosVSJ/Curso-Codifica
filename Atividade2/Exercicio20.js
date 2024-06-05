@@ -12,18 +12,20 @@ Salário líquido:
 INSS).
 */
 
-function funcionario(matricula,nome, salarioBruto) {
-    this.matricula = matricula;
-    this.nome = nome;
-    this.salarioBruto = salarioBruto;
+class Funcionario {
+    constructor(matricula, nome, salario) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.salarioBruto = salario;
+    }
 }
 
 
 
-let func1 = new funcionario (1,"Jose",3000)
-let func2 = new funcionario (2,"Jacques",10000)
-let func3 = new funcionario (3,"Joao",50000)
-let func4 = new funcionario (4,"Carlos",2000)
+let func1 = new Funcionario (1,"Jose",3000)
+let func2 = new Funcionario (2,"Jacques",10000)
+let func3 = new Funcionario (3,"Joao",50000)
+let func4 = new Funcionario (4,"Carlos",2000)
 
 
 let arrayFuncionarios = [func1,func2,func3,func4]

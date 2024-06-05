@@ -5,16 +5,20 @@ item em estoque. Escreva uma função que combine os inventários em um único o
 Se um item aparecer em ambas as lojas, some as quantidades.
 */
 
-function itemLojaA(chave,valor, quantidade) {
-    this.chave = chave;
-    this.valor = valor;
-    this.quantidade = quantidade;
+class ItemLojaA {
+    constructor(chave, valor, quantidade) {
+        this.chave = chave;
+        this.valor = valor;
+        this.quantidade = quantidade;
+    }
 }
 
-function itemLojaB(chave,valor, quantidade) {
-    this.chave = chave;
-    this.valor = valor;
-    this.quantidade = quantidade;
+class ItemLojaB {
+    constructor(chave, valor, quantidade) {
+        this.chave = chave;
+        this.valor = valor;
+        this.quantidade = quantidade;
+    }
 }
 
 function itemLojas(chave, valor, quantidade) {
@@ -24,12 +28,12 @@ function itemLojas(chave, valor, quantidade) {
 }
 
 
-let itemA1 = new itemLojaA(1,200,100)
-let itemA2 = new itemLojaA(3,200,100)
-let itemA3 = new itemLojaA(7,200,100)
-let itemB1 = new itemLojaB(6,200,100)
-let itemB2 = new itemLojaB(1,200,100)
-let itemB3 = new itemLojaB(7,200,50)
+let itemA1 = new ItemLojaA(1,200,100)
+let itemA2 = new ItemLojaA(3,200,100)
+let itemA3 = new ItemLojaA(7,200,100)
+let itemB1 = new ItemLojaB(6,200,100)
+let itemB2 = new ItemLojaB(1,200,100)
+let itemB3 = new ItemLojaB(7,200,50)
 
 arrayItens = [itemA1,itemA2,itemA3,itemB1,itemB2,itemB3]
 

@@ -5,17 +5,19 @@ onde as chaves são as categorias, e os valores são arrays de transações pert
 essa categoria. Adicionalmente, inclua um subtotal de valores por categoria.
 */
 
-function transacao(id,valor, data,categoria) {
-    this.id = id;
-    this.valor = valor;
-    this.data = data;
-    this.categoria = categoria;
+class Transacao {
+    constructor(id, valor, data, categoria) {
+        this.id = id;
+        this.valor = valor;
+        this.data = data;
+        this.categoria = categoria;
+    }
 }
 
-let transacao1 = new transacao(1,200,"26/05/2024",2)
-let transacao2 = new transacao(1,600,"26/05/2024",2)
-let transacao3 = new transacao(1,200,"26/05/2024",1)
-let transacao4 = new transacao(1,200,"26/05/2024",3)
+let transacao1 = new Transacao(1,200,"26/05/2024",2)
+let transacao2 = new Transacao(1,600,"26/05/2024",2)
+let transacao3 = new Transacao(1,200,"26/05/2024",1)
+let transacao4 = new Transacao(1,200,"26/05/2024",3)
 
 let arrayTransacoes = [transacao1,transacao2,transacao3,transacao4]
 

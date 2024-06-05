@@ -4,15 +4,18 @@ com vendedor e valor. Escreva uma função que retorne um objeto que sumarize o 
 de vendas por vendedor.
 */
 
-function venda(vendedor,valor) {
-    this.vendedor = vendedor;
-    this.valor = valor;
+class Venda {
+    constructor(vendedor, valor) {
+        this.vendedor = vendedor;
+        this.valor = valor;
+    }
 }
 
-let venda1 = new venda("Carlos",300)
-let venda2 = new venda("Jose",600)
-let venda3 = new venda("Maria",500)
-let venda4 = new venda("Maria",200)
+
+let venda1 = new Venda("Carlos",300)
+let venda2 = new Venda("Jose",600)
+let venda3 = new Venda("Maria",500)
+let venda4 = new Venda("Maria",200)
 
 let vendas = [venda1,venda2,venda3,venda4]
 

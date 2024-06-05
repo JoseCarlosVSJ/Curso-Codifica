@@ -3,7 +3,9 @@ Fazer um algoritmo para receber uma matriz 10 x 10 e devolver o resultado pedido
 item:
 a) a soma dos elementos acima da diagonal principal;
 b) a soma dos elementos abaixo da diagonal principal;
- */let matriz = [];
+ */
+
+let matriz = [];
 for (let i = 0; i < 15; i++) {
     matriz[i] = [];
     for (let j = 0; j < 20; j++) {

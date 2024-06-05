@@ -4,20 +4,25 @@ combinando as propriedades de ambos, onde as propriedades de obj2 têm precedên
 sobre as do obj1 em caso de conflitos.
 */
 
-function obj1(elemento1, elemento2, elemento3) {
-    this.elemento1 = elemento1;
-    this.elemento2 = elemento2;
-    this.elemento3 = elemento3;
+class Obj1 {
+    constructor(elemento1, elemento2, elemento3) {
+        this.elemento1 = elemento1;
+        this.elemento2 = elemento2;
+        this.elemento3 = elemento3;
+    }
 }
 
-function obj2(elemento1, elemento4, elemento5) {
-    this.elemento1 = elemento1;
-    this.elemento4 = elemento4;
-    this.elemento5 = elemento5;
+class Obj2 {
+    constructor(elemento1, elemento4, elemento5) {
+        this.elemento1 = elemento1;
+        this.elemento4 = elemento4;
+        this.elemento5 = elemento5;
+    }
 }
 
-let objeto1 = new obj1(2, 5, 7);
-let objeto2 = new obj2(9, 6, 8);
+
+let objeto1 = new Obj1(2, 5, 7);
+let objeto2 = new Obj2(9, 6, 8);
 
 let objeto3 = {};
 for (chave in objeto1) {
